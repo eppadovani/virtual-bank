@@ -1,0 +1,75 @@
+.body {
+    -fx-background-color: #2a2828;
+}
+
+.login-btn {
+    -fx-font-family: Montserrat;
+    -fx-font-weight: bold;
+    /*-fx-background-color: #5344FF;*/
+    -fx-background-color: #1db954;
+    -fx-text-fill: #fafafa;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-font-size: 16px;
+}
+
+.login-btn:hover {
+    /*-fx-background-color: #5326ff;*/
+    -fx-background-color: #1b9a47;
+    -fx-cursor: hand;
+}
+
+.hero-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-font-family: Montserrat;
+    -fx-text-fill: #1db954;
+}
+
+.input {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #181717;
+    -fx-text-fill: #fafafa;
+}
+
+.input-field {
+    -fx-font-family: Montserrat;
+    -fx-text-fill: #fafafa;
+}
+
+.hero-description {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-family: Montserrat;
+    -fx-text-fill: #fafafa;
+}
+
+.choice-box {
+    -fx-background-color: #181717;
+    -fx-mark-color: #1db954;
+}
+
+.choice-box > .label {
+    -fx-text-fill: #fafafa;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: #181717;
+}
+
+.choice-box .context-menu {
+    -fx-pref-width: 200;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #1db954;
+}
+
+.choice-box .menu-item > .label {
+    -fx-text-fill: #fafafa;
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: #fafafa;
+}

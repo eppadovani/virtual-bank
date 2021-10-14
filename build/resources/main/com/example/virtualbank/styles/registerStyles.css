@@ -1,0 +1,42 @@
+.body {
+    -fx-background-color: #2a2828;
+}
+
+.login-btn {
+    -fx-font-family: Montserrat;
+    -fx-font-weight: bold;
+    -fx-background-color: #2a2828;
+    -fx-text-fill: #1db954;
+    -fx-border-radius: 10px;
+    -fx-border-color: #1db954;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-font-size: 16px;
+}
+
+.login-btn:hover {
+    /*-fx-background-color: #5326ff;*/
+    -fx-background-color: #1db954;
+    -fx-text-fill: #fafafa;
+    -fx-cursor: hand;
+}
+
+.hero-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 56px;
+    -fx-font-family: Montserrat;
+    -fx-text-fill: #1db954;
+}
+
+.hero-description {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-family: Montserrat;
+    -fx-text-fill: #eaeaea;
+}
+
+.description {
+    -fx-font-size: 16px;
+    -fx-font-family: Montserrat;
+    -fx-text-fill: #eaeaea;
+}

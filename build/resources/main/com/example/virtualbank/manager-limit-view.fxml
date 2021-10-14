@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="760.0" spacing="20.0" styleClass="body" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualbank.controllers.managerLimitController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label prefHeight="103.0" prefWidth="228.0" styleClass="hero-customer" text="Account limit">
+        <VBox.margin>
+            <Insets bottom="-31.0" top="-54.0" />
+        </VBox.margin>
+      <padding>
+         <Insets bottom="25.0" />
+      </padding></Label>
+    
+    <Label styleClass="hero-customer-description" text="Select an account to set a limit.">
+        <VBox.margin>
+            <Insets bottom="19.0" top="-29.0" />
+        </VBox.margin></Label>
+
+    <ChoiceBox fx:id="choiceBox" onAction="#onItemSelected" prefHeight="40.0" prefWidth="200.0" value="Select an account">
+      <VBox.margin>
+         <Insets bottom="33.0" />
+      </VBox.margin></ChoiceBox>
+
+    <TextField fx:id="inputLimit" managed="false" maxWidth="-Infinity" prefHeight="43.0" prefWidth="296.0" promptText="Enter the limit" styleClass="input">
+        <VBox.margin>
+            <Insets bottom="-45.0" />
+        </VBox.margin>
+    </TextField>
+
+    <Button fx:id="saveButton" contentDisplay="CENTER" managed="false" onAction="#onSaveClick" prefHeight="41.0" prefWidth="153.0" styleClass="deposit-btn" text="Save" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="49.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onBackButtonClick" prefHeight="41.0" prefWidth="153.0" styleClass="logout-btn" text="Back to menu" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-112.0" left="5.0" right="5.0" top="41.0" />
+        </VBox.margin></Button>
+
+    <stylesheets>
+        <URL value="@styles/menuStyles.css" />
+    </stylesheets>
+
+
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="760.0" spacing="20.0" styleClass="body" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualbank.controllers.managerController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label prefHeight="103.0" prefWidth="251.0" styleClass="hero-customer" text="Hello Manager">
+        <VBox.margin>
+            <Insets bottom="-31.0" top="-54.0" />
+        </VBox.margin>
+      <padding>
+         <Insets bottom="25.0" />
+      </padding></Label>
+
+    <Label styleClass="hero-customer-description" text="What do you wanna do today?">
+        <VBox.margin>
+            <Insets bottom="-10.0" />
+        </VBox.margin>
+      <padding>
+         <Insets bottom="29.0" top="-33.0" />
+      </padding></Label>
+
+    <Button contentDisplay="CENTER" onAction="#onManagerDepositButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Deposit" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-20.0" top="10.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onNewUserButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="New User" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets left="-400.0" top="-89.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onWithdrawButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Withdraw" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-20.0" right="-400.0" top="-114.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onUserInfoButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="User infos" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-20.0" right="400.0" top="40.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onEditInfoButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Management" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-20.0" top="-91.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onEditPasswordButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Edit password" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets left="230.0" right="-170.0" top="-91.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onLogoutButtonClick" prefHeight="41.0" prefWidth="153.0" styleClass="logout-btn" text="Log out" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-55.0" left="5.0" right="5.0" top="31.0" />
+        </VBox.margin></Button>
+
+    <stylesheets>
+        <URL value="@styles/menuStyles.css" />
+    </stylesheets>
+
+</VBox>

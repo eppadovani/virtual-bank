@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="760.0" spacing="20.0" styleClass="body" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualbank.controllers.bankStatementController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label prefHeight="103.0" prefWidth="266.0" styleClass="hero-customer" text="Bank statement">
+        <VBox.margin>
+            <Insets bottom="-31.0" top="-54.0" />
+        </VBox.margin>
+      <padding>
+         <Insets bottom="25.0" />
+      </padding></Label>
+    
+    <Label styleClass="hero-customer-description" text="Account transactions.">
+        <VBox.margin>
+            <Insets bottom="19.0" top="-29.0" />
+        </VBox.margin></Label>
+
+    <ChoiceBox fx:id="choiceBox" onAction="#onItemSelected" prefHeight="40.0" prefWidth="200.0" value="Select an account">
+      <VBox.margin>
+         <Insets bottom="-5.0" />
+      </VBox.margin></ChoiceBox>
+
+   <ListView managed="false" fx:id="listView" prefHeight="200.0" prefWidth="661.0">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin></ListView>
+
+    <Button contentDisplay="CENTER" onAction="#onBackButtonClick" prefHeight="41.0" prefWidth="153.0" styleClass="logout-btn" text="Back to menu" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-112.0" left="5.0" right="5.0" top="14.0" />
+        </VBox.margin></Button>
+
+    <stylesheets>
+        <URL value="@styles/menuStyles.css" />
+    </stylesheets>
+
+
+</VBox>
