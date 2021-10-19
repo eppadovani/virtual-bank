@@ -71,7 +71,6 @@ public class withdrawController {
 					if(choiceBox.getValue().withdraw(amount)) {
 						message = "Withdraw completed";
 						choiceBox.getValue().bankStatement.add("- " + amount);
-						System.out.println(choiceBox.getValue().bankStatement);
 					} else {
 						message = "Out of balance. Talk to manager.";
 					}
@@ -86,7 +85,6 @@ public class withdrawController {
 					if(choiceBox.getValue().withdraw(amount)) {
 						message = "Withdraw completed";
 						choiceBox.getValue().bankStatement.add("- " + amount);
-						System.out.println(choiceBox.getValue().bankStatement);
 					} else {
 						message = "Out of balance. Talk to manager.";
 					}
@@ -100,7 +98,6 @@ public class withdrawController {
 					if(choiceBox.getValue().withdraw(amount)) {
 						message = "Withdraw completed";
 						choiceBox.getValue().bankStatement.add("- " + amount);
-						System.out.println(choiceBox.getValue().bankStatement);
 					} else {
 						message = "Out of balance and limit.";
 					}

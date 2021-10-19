@@ -10,7 +10,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label prefHeight="103.0" prefWidth="251.0" styleClass="hero-customer" text="Hello Manager">
+    <Label fx:id="heroWelcome" prefHeight="103.0" prefWidth="724.0" styleClass="hero-customer">
         <VBox.margin>
             <Insets bottom="-31.0" top="-54.0" />
         </VBox.margin>
