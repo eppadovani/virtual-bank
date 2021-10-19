@@ -62,7 +62,7 @@ public class managerWithdrawController {
 	String message;
 
 	@FXML
-	protected void onWithdrawClick(ActionEvent actionEvent) throws IOException {
+	protected void onWithdrawClick(ActionEvent actionEvent) {
 		double amount = 0;
 		amount = Double.parseDouble(inputAmount.getText().replace(',', '.'));
 

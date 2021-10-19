@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="760.0" spacing="20.0" styleClass="body" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualbank.controllers.moneyTransferController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label prefHeight="103.0" prefWidth="261.0" styleClass="hero-customer" text="Money transfer">
+        <VBox.margin>
+            <Insets bottom="-31.0" top="-138.0" />
+        </VBox.margin>
+      <padding>
+         <Insets bottom="25.0" />
+      </padding></Label>
+
+    <Label styleClass="hero-customer-description" text="Select the source and destiny customer.">
+        <VBox.margin>
+            <Insets bottom="19.0" top="-30.0" />
+        </VBox.margin></Label>
+
+    <Label styleClass="hero-customer-description" text="From">
+        <VBox.margin>
+            <Insets bottom="-52.0" right="250.0" top="6.0" />
+        </VBox.margin></Label>
+
+    <Label styleClass="hero-customer-description" text="To">
+        <VBox.margin>
+            <Insets bottom="-40.0" left="250.0" top="6.0" />
+        </VBox.margin></Label>
+
+    <ChoiceBox fx:id="choiceBoxUserSource" onAction="#onUserSourceSelected" prefHeight="40.0" prefWidth="200.0" value="Select an user">
+      <VBox.margin>
+         <Insets right="250.0" top="23.0" />
+      </VBox.margin></ChoiceBox>
+
+    <ChoiceBox fx:id="choiceBoxUserSourceAccounts" disable="true" prefHeight="40.0" prefWidth="200.0" value="Select an user">
+        <VBox.margin>
+            <Insets right="250.0" top="-7.0" />
+        </VBox.margin></ChoiceBox>
+
+    <ChoiceBox fx:id="choiceBoxUserDestiny" onAction="#onUserDestinySelected" prefHeight="40.0" prefWidth="200.0" value="Select an account">
+        <VBox.margin>
+            <Insets bottom="10.0" left="250.0" top="-114.0" />
+        </VBox.margin></ChoiceBox>
+
+    <ChoiceBox fx:id="choiceBoxUserDestinyAccounts" onAction="#onDestinyAccountSelected" disable="true" prefHeight="40.0" prefWidth="200.0"  value="Select an account">
+        <VBox.margin>
+            <Insets bottom="10.0" left="250.0" top="-16.0" />
+        </VBox.margin></ChoiceBox>
+
+    <TextField fx:id="inputAmount" managed="false" maxWidth="-Infinity" prefHeight="43.0" prefWidth="228.0" promptText="Enter the amount" styleClass="input">
+        <VBox.margin>
+            <Insets bottom="-36.0" top="8.0" />
+        </VBox.margin>
+    </TextField>
+
+    <Button fx:id="transferButton" managed="false" onAction="#onTransferButtonClick" contentDisplay="CENTER" prefHeight="41.0" prefWidth="153.0" styleClass="deposit-btn" text="Deposit" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets left="5.0" right="5.0" top="33.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onBackButtonClick" prefHeight="41.0" prefWidth="153.0" styleClass="logout-btn" text="Back to menu" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-123.0" left="5.0" right="5.0" top="7.0" />
+        </VBox.margin></Button>
+
+    <stylesheets>
+        <URL value="@styles/menuStyles.css" />
+    </stylesheets>
+
+
+</VBox>

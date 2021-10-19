@@ -127,4 +127,24 @@ public class newAccountController {
 		}
 	}
 
+	@FXML
+	protected void onBackButtonClick(ActionEvent actionEvent) {
+		try {
+			Node node = (Node)actionEvent.getSource();
+			Stage currentStage = (Stage)node.getScene().getWindow();
+
+			currentStage.close();
+
+			FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("customer-menu.fxml"));
+			Stage stage = new Stage();
+			Scene scene = new Scene(fxmlLoader.load(), 760, 550);
+			stage.setTitle("Cryptle");
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

@@ -10,7 +10,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label prefHeight="103.0" prefWidth="225.0" styleClass="hero-customer" text="Management">
+    <Label fx:id="heroWelcome" prefHeight="103.0" prefWidth="225.0" styleClass="hero-customer">
         <VBox.margin>
             <Insets bottom="-31.0" top="-54.0" />
         </VBox.margin>
@@ -28,12 +28,17 @@
 
     <Button contentDisplay="CENTER" onAction="#onLimitButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Account limit" textAlignment="CENTER" VBox.vgrow="ALWAYS">
         <VBox.margin>
-            <Insets bottom="-20.0" right="200.0" top="10.0" />
+            <Insets bottom="-20.0" right="350.0" top="10.0" />
         </VBox.margin></Button>
 
     <Button contentDisplay="CENTER" onAction="#onSavingsButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Savings rate" textAlignment="CENTER" VBox.vgrow="ALWAYS">
         <VBox.margin>
-            <Insets bottom="-20.0" right="-200.0" top="-91.0" />
+            <Insets bottom="-20.0" top="-91.0" />
+        </VBox.margin></Button>
+
+    <Button contentDisplay="CENTER" onAction="#onTransferButtonClick" prefHeight="91.0" prefWidth="153.0" styleClass="menu-btn" text="Money transfer" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets bottom="-20.0" left="350.0" top="-91.0" />
         </VBox.margin></Button>
 
     <Button contentDisplay="CENTER" onAction="#onBackButtonClick" prefHeight="41.0" prefWidth="153.0" styleClass="logout-btn" text="Back to menu" textAlignment="CENTER" VBox.vgrow="ALWAYS">

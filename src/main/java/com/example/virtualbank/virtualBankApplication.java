@@ -1,6 +1,7 @@
 package com.example.virtualbank;
 
 import com.example.virtualbank.controllers.loginController;
+import com.example.virtualbank.controllers.popUpController;
 import com.example.virtualbank.controllers.registerController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,7 @@ public class virtualBankApplication extends Application {
 
 	@Override
 	public void start(Stage stage) throws IOException {
+
 		FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("register-view.fxml"));
 		Scene scene = new Scene(fxmlLoader.load(), 760, 550);
 		stage.setTitle("Cryptle");

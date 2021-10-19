@@ -6,11 +6,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class customerController {
+	@FXML
+	private Label heroWelcome;
+
+	public void initialize() {
+		heroWelcome.setText("Hello, " + loginController.loggedUser.getUsername());
+	}
+
 	@FXML
 	protected void onLogoutButtonClick(ActionEvent actionEvent) {
 		try {
