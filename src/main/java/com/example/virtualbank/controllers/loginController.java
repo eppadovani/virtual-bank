@@ -89,4 +89,26 @@ public class loginController {
 			popUpShow("Wrong credentials.");
 		}
 	}
+
+	@FXML
+	protected void onLogoutButtonClick(ActionEvent actionEvent) {
+		try {
+			loginController.loggedUser = null;
+
+			Node node = (Node)actionEvent.getSource();
+			Stage currentStage = (Stage)node.getScene().getWindow();
+
+			currentStage.close();
+
+			FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("register-view.fxml"));
+			Stage stage = new Stage();
+			Scene scene = new Scene(fxmlLoader.load(), 760, 550);
+			stage.setTitle("Cryptle");
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

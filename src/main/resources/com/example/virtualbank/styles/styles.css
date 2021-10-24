@@ -73,3 +73,22 @@
 .choice-box .menu-item:focused > .label {
     -fx-text-fill: #fafafa;
 }
+
+.logout-btn {
+    -fx-font-family: Montserrat;
+    -fx-font-weight: bold;
+    -fx-background-color: #2a2828;
+    -fx-text-fill: #FF2B4D;
+    -fx-border-radius: 10px;
+    -fx-border-color: #FF2B4D;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-font-size: 16px;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #FF2B4D;
+    -fx-border-color: #FF2B4D;
+    -fx-text-fill: #fafafa;
+    -fx-cursor: hand;
+}
