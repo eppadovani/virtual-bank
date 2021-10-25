@@ -80,7 +80,6 @@ public class newUserController {
 					Customer customer = new Customer(inputName.getText(), inputPassword.getText());
 					registerController.allCustomers.add(customer);
 
-					((Manager) loginController.loggedUser).getCustomerList().add(customer);
 					userType = "customer";
 				} else {
 					Manager manager = new Manager(inputName.getText(), inputPassword.getText());

@@ -138,6 +138,11 @@ public class registerController {
 
 					Manager manager = new Manager(inputName.getText(), inputPassword.getText());
 					allManagers.add(manager);
+
+					BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("managerCustomers.txt", true));
+					bufferedWriter.append(manager.getUsername()).append('$');
+					bufferedWriter.newLine();
+					bufferedWriter.close();
 				}
 			} else {
 				message = "Fill all the fields.";
