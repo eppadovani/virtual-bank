@@ -31,6 +31,15 @@ public abstract class User {
 		return password;
 	}
 
+	public boolean auth(String oldPassword, String newPassword) {
+		boolean result = oldPassword.equals(password);
+		if(result) {
+			password = newPassword;
+		}
+
+		return result;
+	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}

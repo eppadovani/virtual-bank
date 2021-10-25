@@ -74,33 +74,29 @@ public class newUserController {
 			} else {
 				message = "You've created a new account!";
 
+				String userType;
+
 				if(choiceBox.getValue().equals("Customer")) {
 					Customer customer = new Customer(inputName.getText(), inputPassword.getText());
 					registerController.allCustomers.add(customer);
 
 					((Manager) loginController.loggedUser).getCustomerList().add(customer);
-
-					BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("loginInformation.txt", true));
-					bufferedWriter.append("customer");
-					bufferedWriter.newLine();
-					bufferedWriter.append(inputName.getText());
-					bufferedWriter.newLine();
-					bufferedWriter.append(inputPassword.getText());
-					bufferedWriter.newLine();
-					bufferedWriter.close();
+					userType = "customer";
 				} else {
 					Manager manager = new Manager(inputName.getText(), inputPassword.getText());
 					registerController.allManagers.add(manager);
 
-					BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("loginInformation.txt", true));
-					bufferedWriter.append("manager");
-					bufferedWriter.newLine();
-					bufferedWriter.append(inputName.getText());
-					bufferedWriter.newLine();
-					bufferedWriter.append(inputPassword.getText());
-					bufferedWriter.newLine();
-					bufferedWriter.close();
+					userType = "manager";
 				}
+
+				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("loginInformation.txt", true));
+				bufferedWriter.append(userType);
+				bufferedWriter.newLine();
+				bufferedWriter.append(inputName.getText());
+				bufferedWriter.newLine();
+				bufferedWriter.append(inputPassword.getText());
+				bufferedWriter.newLine();
+				bufferedWriter.close();
 			}
 		} else {
 			message = "Fill all the fields.";

@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -26,17 +27,48 @@ public class changePasswordController {
 	String message;
 
 	public boolean changePassword() {
-		if(inputOldPassword.getText().equals(loginController.loggedUser.getPassword())) {
-			loginController.loggedUser.setUsername(inputNewPassword.getText());
-			message = "Your password has been changed.";
+		String newPassword = inputNewPassword.getText();
+
+		if(loginController.loggedUser.auth(inputOldPassword.getText(), newPassword)) {
+			String temporaryString = "";
+
+			try {
+				BufferedReader bufferedReader = new BufferedReader(new FileReader("loginInformation.txt"));
+				String lineReading = bufferedReader.readLine();
+
+				while(lineReading != null) {
+					temporaryString = temporaryString.concat(lineReading+"\n");
+					lineReading = bufferedReader.readLine();
+				}
+				bufferedReader.close();
+
+				String[] lines = temporaryString.split("\n");
+
+				for(int i= 0; i < lines.length; i++) {
+					String line = lines[i];
+
+					if(line.equals(loginController.loggedUser.getUsername()) && i + 1 < lines.length) {
+						lines[i+1] = newPassword;
+
+						message = "Your password has been changed.";
+					}
+				}
+
+				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("loginInformation.txt"));
+				bufferedWriter.write(String.join("\n", lines));
+				bufferedWriter.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 
 			return true;
-		} else {
-			message = "Old password doesn't match.";
-
-			return false;
 		}
+
+		message = "Old password doesn't match.";
+		return false;
 	}
+
 
 	@FXML
 	protected void onChangePasswordButtonClick(ActionEvent actionEvent) throws IOException {
@@ -85,4 +117,44 @@ public class changePasswordController {
 		}
 	}
 
+	@FXML
+	protected void onBackButtonClick(ActionEvent actionEvent) {
+		if(loginController.loggedUser.getType().equals("customer")) {
+			try {
+				Node node = (Node)actionEvent.getSource();
+				Stage currentStage = (Stage)node.getScene().getWindow();
+
+				currentStage.close();
+
+				FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("customer-menu.fxml"));
+				Stage stage = new Stage();
+				Scene scene = new Scene(fxmlLoader.load(), 760, 550);
+				stage.setTitle("Cryptle");
+				stage.setScene(scene);
+				stage.setResizable(false);
+				stage.show();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				Node node = (Node)actionEvent.getSource();
+				Stage currentStage = (Stage)node.getScene().getWindow();
+
+				currentStage.close();
+
+				FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("manager-menu.fxml"));
+				Stage stage = new Stage();
+				Scene scene = new Scene(fxmlLoader.load(), 760, 550);
+				stage.setTitle("Cryptle");
+				stage.setScene(scene);
+				stage.setResizable(false);
+				stage.show();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+
+	}
 }
