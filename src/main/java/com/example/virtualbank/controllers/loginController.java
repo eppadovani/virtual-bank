@@ -120,7 +120,7 @@ public class loginController {
 
 			currentStage.close();
 
-			FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("manager-menu.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(virtualBankApplication.class.getResource("register-view.fxml"));
 			Stage stage = new Stage();
 			Scene scene = new Scene(fxmlLoader.load(), 760, 550);
 			stage.setTitle("Cryptle");
